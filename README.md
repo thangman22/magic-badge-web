@@ -1,18 +1,22 @@
 # Magic Badge
 
-Web-based designer for LED name badges. Create text, pick icons, and preview how your badge will look before sending to a physical badge via the Badge Magic app.
+**Design and send messages to FOSSASIA LED name badges from your browser.** No app required—create animated text, pick from hundreds of pixel-art icons, and preview on a live 11×44 grid before connecting via Web Bluetooth or the Badge Magic app.
 
 ## What’s in this repo
 
-- **Web app** (`app.js`, `index.html`) – Design badges in the browser: enter text, choose effects and speed, pick from hundreds of pixel-art icons, and see a live LED-style preview.
+- **Web app** (`app.js`, `index.html`) – Design badges in the browser: enter text, choose effects and speed, pick from hundreds of pixel-art icons, and see a live LED-style preview. Uses the **Web Bluetooth API** to connect and send data to compatible LED badges directly from the browser—no native app install required.
 - **SVG assets** – Pixel-art icons in `assets/vectors/` are bundled into `svgAssets.js` for the icon picker.
 - **badge-magic-android/** – [Badge Magic](https://github.com/fossasia/badgemagic-app) Android (and cross‑platform) app for saving and sending badges to devices over Bluetooth. See that folder’s README for build and run instructions.
 
+## Web Bluetooth
+
+This project uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to discover and connect to FOSSASIA LED badges from the browser. When you click **Connect & Send**, the page requests a Bluetooth device; after you pick your badge, it sends the current design (text, effects, icon) over BLE. No app store install is required—just open the site over **HTTPS** (or `localhost`) in a [supported browser](https://caniuse.com/web-bluetooth) (e.g. Chrome, Edge, Opera on desktop and Android).
+
 ## Quick start (web)
 
-1. Serve the project root over HTTP (e.g. `npx serve .` or any static server).
+1. Serve the project root over HTTP (e.g. `npx serve .` or any static server). For Web Bluetooth, use HTTPS or `localhost`.
 2. Open the page and use the controls to set message, effect, speed, and optional icon.
-3. Use the preview to see the result; export or use the Android app to send to a real badge.
+3. Use the preview to see the result, then click **Connect & Send** to pair with your badge via Web Bluetooth, or export and use the Badge Magic app to send.
 
 ## GitHub Pages
 
