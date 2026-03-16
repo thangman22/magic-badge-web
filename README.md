@@ -14,6 +14,18 @@ Web-based designer for LED name badges. Create text, pick icons, and preview how
 2. Open the page and use the controls to set message, effect, speed, and optional icon.
 3. Use the preview to see the result; export or use the Android app to send to a real badge.
 
+## GitHub Pages
+
+You can host the web app on [GitHub Pages](https://pages.github.com/) for free.
+
+1. Push this repo to GitHub.
+2. Open the repo **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Choose your default branch (e.g. `main`) and **/ (root)** as the folder, then Save.
+5. After the first deploy, the site will be at `https://<username>.github.io/<repo-name>/`.
+
+A `.nojekyll` file in the root tells GitHub Pages to serve the site as static files (no Jekyll build).
+
 ## Regenerating icon assets
 
 Icons in `assets/vectors/*.svg` are compiled into `svgAssets.js`:
