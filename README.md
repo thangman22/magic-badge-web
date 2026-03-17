@@ -1,4 +1,4 @@
-# Magic Badge
+# Badge Magic
 
 ![Badge Magic – LED Badge Designer](repo-image.png)
 
@@ -49,7 +49,7 @@ Run this after adding or changing SVGs in `assets/vectors/`.
 
 ## License
 
-This project (the Magic Badge web app and scripts in this repository) is licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
+This project (the Badge Magic web app and scripts in this repository) is licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
 
 This project uses and references the following works. Each retains its original license.
 
